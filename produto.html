@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SvartVinyl</title>
+    <link rel="stylesheet" href="produto.css">
+    <link rel="stylesheet" href="homepage.css">
+    <script src="https://kit.fontawesome.com/391ce7cbeb.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="menu">
+            <button id="menu-toggle" aria-expanded="false" aria-controls="main-menu">
+                <i class="fa-solid fa-bars fa-2xl"></i>
+            </button>
+        </div>
+
+        <div>
+            <h1>SvartVinyl</h1>
+        </div>
+
+        <div id="icons">
+            <a href="cadastro.html">
+                <i class="fa-regular fa-user fa-lg"></i>
+            </a>
+
+            <a href="carrinho.html">
+                <i class="fa-solid fa-bag-shopping fa-lg"></i>
+            </a>
+
+            <a href="pesquisar.html">
+                <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+            </a>
+        </div>
+    </nav>
+    <div class="menu-dropdown" id="main-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogo.html">Produtos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="index.html">Quem Somos</a></li>
+            <li><a href="pedidos.html">Pedidos</a></li>
+        </ul>
+    </div>
+
+
+    <section class="product-section">
+        <img class="product-image" src="assets/filosofem.jpg" alt="Filosofem - Burzum">
+
+        <div class="product-details">
+            <h2>Filosofem</h2>
+            <h4>Burzum</h4>
+
+            <span class="rating">
+                5/5
+            </span>
+
+            <p class="product-description">
+                Um dos álbuns de Black Metal Norueguês mais influenciáveis, lançado em 1996. Edição especial prensada em
+                vinil de alta qualidade.
+
+            </p>
+
+
+            <input type="number" id="quantity" min="0" value="1">
+
+
+            <p class="product-price">R$149,99</p>
+
+            <div class="product-buttons">
+                <button class="btn btn-red btn-block-mobile">Buy Now</button>
+                <button class="btn btn-transparent btn-block-mobile">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="destaques container">
+        <h2>Confira também</h2>
+        <div class="grid-destaques">
+            <a href="produto.html">
+                <img src="assets/filosofem.jpg" alt="">
+                <h4>Filosofem</h4>
+                <p>Burzum</p>
+                <p class="preco">R$149,99</p>
+            </a>
+            <a href="produto.html">
+                <img src="assets/bloodfiredeath.jpg" alt="">
+                <h4>Blood Fire Death</h4>
+                <p>Bathory</p>
+                <p class="preco">R$249,99</p>
+            </a>
+            <a href="produto.html">
+                <img src="assets/1184.jpg" alt="">
+                <h4>1184</h4>
+                <p>Windir</p>
+                <p class="preco">R$349,99</p>
+            </a>
+            <a href="produto.html">
+                <img src="assets/inthenightsideeclipse.jpg" alt="">
+                <h4>In the Nightside Eclipse</h4>
+                <p>Emperor</p>
+                <p class="preco">R$449,99</p>
+            </a>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <section class="footer-container">
+            <div class="footer-item">
+                <h2>Lorem Ipsum</h2>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-regular fa-house"></i>
+                            <p>Home</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-regular fa-user"></i>
+                            <p>Quem Somos</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="catalogo.html">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <p>Produtos</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contato.html">
+                            <i class="fa-solid fa-phone"></i>
+                            <p>Contato</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-item">
+                <h2>Lorem Ipsum</h2>
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-instagram"></i>
+                            <p>SvartVinyl</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>SvartVinyl@gmail.com</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-phone"></i>
+                            <p>+55319XXXXXXXX</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <p>SvartVinyl</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-item">
+                <h2>Lorem Ipsum</h2>
+                <p>Copyright © 2026 SvartVinyl. Todos os direitos reservados.</p>
+                img
+            </div>
+        </section>
+    </footer>
+    <script src="menu.js" defer></script>
+</body>
+
+</html>

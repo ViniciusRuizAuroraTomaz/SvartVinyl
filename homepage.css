@@ -1,0 +1,73 @@
+/* ========================================
+   Home page styles
+   ======================================== */
+
+@import './style.css';
+
+/* Hero section */
+.hero {
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%),
+    url('./assets/Saint_Jerome_Writing-Caravaggio_(1605-6).jpg');
+  height: 100dvh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.destaques {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.destaques h2 {
+  font-size: 2.25rem;
+}
+
+.destaques .grid-destaques{
+    margin: 2.75rem 0;
+}
+
+.grid-destaques {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-destaques h4 {
+  font-size: 2.25rem;
+  color: var(--title-color);
+  margin-top: 0.5rem;
+}
+
+.grid-destaques p {
+  font-size: 0.875rem;
+}
+
+.preco {
+  font-size: 0.75rem;
+}
+
+/* Responsive home grid */
+@media (width < 769px) {
+  .grid-destaques {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-destaques h4 {
+    font-size: 1.25rem;
+  }
+
+  .grid-destaques p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (width < 481px) {
+  .hero {
+    background-position-x: 65%;
+  }
+}

@@ -1,0 +1,311 @@
+/* ========================================
+   Global imports and CSS variables
+   ======================================== */
+
+@import url('https://cdnfonts.com');
+@import url('https://googleapis.com');
+
+:root {
+  --purple: #4f378a;
+  --red: #8c1c13;
+  --black: #050505;
+  --dark-gray: #1a1a1a;
+  --title-color: #fbfbfbe6;
+  --text-color: #e5e5e5e6;
+
+  --title-font: 'Old English Text MT';
+  --text-font: 'Offside', sans-serif;
+
+  --max-width: 1440px;
+}
+
+/* ========================================
+   Reset and base layout
+   ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+img,
+svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--title-color);
+  font-family: var(--title-font);
+  font-weight: normal;
+}
+
+/* ========================================
+   Typography
+   ======================================== */
+
+p,
+label,
+li {
+  color: var(--text-color);
+  font-family: var(--text-font);
+}
+
+/* ========================================
+   Button styles
+   ======================================== */
+
+.btn {
+  border: none;
+
+  padding: 1rem 2rem;
+  color: var(--title-color);
+
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
+
+  font-family: var(--title-font);
+  cursor: pointer;
+  transition: ease-in-out 0.1s;
+
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.btn:not(.btn-transparent):hover {
+  opacity: 0.9;
+}
+
+.btn-red {
+  background-color: var(--red);
+  border: 1px solid var(--red);
+}
+
+.btn-white {
+  background-color: var(--title-color);
+  border: 1px solid var(--title-color);
+  color: var(--purple);
+}
+
+.btn-transparent {
+  border: 1px solid var(--title-color);
+  background-color: transparent;
+}
+
+.container {
+  width: min(100%, var(--max-width));
+  padding: 2.5rem 1rem;
+}
+
+/* Opcional: Se você quiser que os botões ocupem a largura total da tela no mobile */
+@media (max-width: 480px) {
+  .btn-block-mobile {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ========================================
+   Navigation
+   ======================================== */
+
+.navbar {
+  height: 100px;
+  width: min(100%, var(--max-width));
+  padding: 0 1rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  font-weight: normal;
+}
+
+#icons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+#icons i,
+.menu button,
+.menu a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar i {
+  color: var(--text-color);
+}
+
+.menu button,
+.menu a {
+  background: transparent;
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+.menu-dropdown {
+  background-color: var(--dark-gray);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: min(100%, 320px);
+  height: 100dvh;
+  display: none;
+  padding: 3rem 2rem 2rem 2rem;
+  font-size: 2rem;
+  font-family: var(--title-font);
+  color: var(--title-color);
+  z-index: 50;
+}
+
+#menu-toggle {
+  margin: 0;
+}
+
+.menu-dropdown.open {
+  display: block;
+}
+
+.menu-dropdown ul {
+  padding: 0;
+}
+
+.menu-dropdown li {
+  margin-bottom: 1.5rem;
+  font-family: var(--title-font);
+}
+
+.menu-dropdown a {
+  display: block;
+  color: var(--title-color);
+  transition: opacity 0.2s ease-in-out;
+}
+
+.menu-dropdown a:hover {
+  opacity: 0.8;
+}
+
+.menu-dropdown li {
+  margin-bottom: 1.5rem;
+}
+
+.hero button {
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+
+footer {
+  width: 100%;
+  padding: 4rem 0;
+  background-color: #000000;
+}
+
+.footer-container {
+  width: min(100%, var(--max-width));
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-item h2 {
+  font-size: 2rem;
+}
+
+.footer-item ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.footer-item a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  transition: ease-in 0.1s;
+}
+
+.footer-item a:hover {
+  opacity: 0.75;
+}
+
+.footer-item a p {
+  font-size: 1rem;
+}
+
+.footer-item i {
+  color: var(--purple);
+}
+
+@media (width < 769px) {
+  .footer-item h2 {
+    font-size: 1.5rem;
+  }
+
+  .footer-item a {
+    gap: 0.5rem;
+  }
+
+  .footer-item a p {
+    font-size: 0.75rem;
+  }
+
+  .footer-item p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (width < 481px) {
+  #icons {
+    gap: 0.25rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}

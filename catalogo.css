@@ -1,0 +1,107 @@
+@import "./style.css";
+
+.acoes{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    padding: 0 1rem;
+    width: min(100%, var(--max-width));
+}
+
+.filtrar{
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+    font-family: var(--text-font);
+    padding: 1rem 2rem;
+    color: var(--title-color);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.no-margin-block{
+    margin-block: 0;
+}
+
+.filtrar i{
+    color: var(--purple);
+}
+
+.grid-destaques{
+    margin: 0;
+}
+
+/* RADIO BUTTON */
+
+.radio {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding-left: .5rem;
+    cursor: pointer;
+}
+
+/* Esconde o visual padrão */
+.radio input {
+    display: none;
+}
+
+/* Círculo */
+.custom-radio {
+    width: 20px;
+    height: 20px;
+
+    border: 2px solid var(--purple);
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .2s;
+}
+
+/* Bolinha interna */
+.custom-radio::after {
+    content: "";
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+    background-color: var(--purple);
+
+    transform: scale(0);
+    transition: .2s;
+}
+
+/* Quando selecionado */
+.radio input:checked + .custom-radio::after {
+    transform: scale(1);
+}
+
+/* container do radio button */
+
+.container-filtrar{
+    position: relative;
+}
+
+.radio-group{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: .5rem;
+    gap: .5rem;
+    padding: 1rem .5rem;
+    background-color: var(--black);
+    border: 2px solid var(--text-color);
+    position: absolute;
+    z-index: 10;
+}
+
+.radio-group.open{
+    display: flex;
+}
+

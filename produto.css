@@ -1,0 +1,79 @@
+/* ========================================
+   Product page styles
+   ======================================== */
+
+@import './style.css';
+
+/* Product layout */
+.product-section {
+  width: min(100%, var(--max-width));
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  padding: 0 1rem;
+  gap: 1rem;
+}
+
+.product-details {
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.product-details h2 {
+  font-size: clamp(2.25rem, 5vw, 4rem);
+}
+
+.product-details h4 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--text-color);
+}
+
+.rating {
+  color: var(--text-color);
+  font-family: var(--text-font);
+}
+
+.product-details p {
+  margin-top: 0.5rem;
+}
+
+#quantity {
+  background-color: transparent;
+  border: 2px solid var(--title-color);
+  color: var(--title-color);
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.5rem;
+  width: fit-content;
+}
+
+.product-buttons {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.product-buttons > .btn {
+  padding: 1rem 1.75rem;
+  width: 100%;
+}
+
+@media (max-width: 1023px) {
+  .product-buttons {
+    flex-direction: column; /* Botões ficam um embaixo do outro */
+  }
+}
+
+/* Responsive product page */
+@media (max-width: 768px) {
+  .product-section {
+    grid-template-columns: 1fr; /* Vira uma única coluna (imagem no topo, infos embaixo) */
+  }
+
+  #quantity {
+    width: 100%; /* Facilita o clique no seletor de quantidade no celular */
+    text-align: center;
+  }
+}

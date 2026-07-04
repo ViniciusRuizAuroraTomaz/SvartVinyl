@@ -1,0 +1,6 @@
+@import "./style.css";
+
+.comprar-novamente{
+    display: flex;
+    justify-content: end;
+}
